@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFPI • Splash</title>
+
+<style>
+/* =========================================================
+   🎨 IDENTIDADE VISUAL — PREMIUM
+========================================================= */
+:root{
+  --green-1:#4DFF9A;
+  --green-2:#2EE88F;
+  --green-3:#1FD17A;
+  --green-4:#16B968;
+  --red:#E53935;
+  --text-dark:#1b1b1b;
+  --text-muted:#6b6b6b;
+  --bg:#ffffff;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* =========================================================
+   📱 BODY — SPLASH APP
+========================================================= */
+body{
+  height:100vh;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* =========================================================
+   🧱 CONTAINER CENTRAL
+========================================================= */
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* =========================================================
+   🟩 LOGO — GRID IF / IS
+========================================================= */
+.logo{
+  display:grid;
+  grid-template-columns:repeat(3, 48px);
+  grid-template-rows:repeat(4, 48px);
+  gap:16px;
+  margin-bottom:40px;
+  position:relative;
+}
+
+/* BLOCOS */
+.block{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  opacity:0;
+  transform:translate(var(--x), var(--y)) scale(.4) rotate(-12deg);
+  animation: assemble 2.2s cubic-bezier(.22,1,.36,1) forwards;
+  will-change: transform, opacity;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* CORES */
+.g1{background:var(--green-1)}
+.g2{background:var(--green-2)}
+.g3{background:var(--green-3)}
+.g4{background:var(--green-4)}
+.circle{background:var(--red); border-radius:50%;}
+.empty{visibility:hidden}
+
+/* DIREÇÕES ALEATÓRIAS */
+.block:nth-child(1){--x:-120px;--y:-160px;animation-delay:.3s}
+.block:nth-child(2){--x:180px;--y:-120px;animation-delay:.45s}
+.block:nth-child(3){--x:-160px;--y:80px;animation-delay:.6s}
+.block:nth-child(4){--x:140px;--y:140px;animation-delay:.75s}
+.block:nth-child(5){--x:-200px;--y:0;animation-delay:.9s}
+.block:nth-child(7){--x:200px;--y:-40px;animation-delay:1.05s}
+.block:nth-child(8){--x:-140px;--y:160px;animation-delay:1.2s}
+.block:nth-child(9){--x:160px;--y:-160px;animation-delay:1.35s}
+.block:nth-child(10){--x:-180px;--y:40px;animation-delay:1.5s}
+.block:nth-child(11){--x:120px;--y:180px;animation-delay:1.65s}
+
+/* ANIMAÇÃO PRINCIPAL */
+@keyframes assemble{
+  to{
+    opacity:1;
+    transform:translate(0,0) scale(1) rotate(0deg);
+  }
+}
+
+/* =========================================================
+   📝 TEXTOS
+========================================================= */
+h1{
+  font-size:.95rem;
+  letter-spacing:.04em;
+  color:var(--text-dark);
+  opacity:0;
+  transform:translateY(12px);
+  animation:textIn .8s ease forwards;
+  animation-delay:3.2s;
+}
+
+h2{
+  font-size:1rem;
+  color:var(--green-3);
+  margin-top:6px;
+  opacity:0;
+  transform:translateY(12px);
+  animation:textIn .8s ease forwards;
+  animation-delay:3.5s;
+}
+
+.aluno{
+  margin-top:22px;
+  font-size:.85rem;
+  color:var(--text-muted);
+  opacity:0;
+  animation:textIn .8s ease forwards;
+  animation-delay:3.8s;
+}
+
+@keyframes textIn{
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* =========================================================
+   🔄 LOADER PREMIUM
+========================================================= */
+.loader{
+  margin-top:36px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:3px solid rgba(0,0,0,.08);
+  border-top:3px solid var(--green-3);
+  animation:spin 1.1s linear infinite;
+  opacity:0;
+  animation-delay:4.2s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+/* RESPONSIVO */
+@media(max-width:420px){
+  .logo{transform:scale(.9)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    <div class="block circle"></div>
+    <div class="block g1"></div>
+    <div class="block g2"></div>
+
+    <div class="block g2"></div>
+    <div class="block g3"></div>
+    <div class="empty"></div>
+
+    <div class="block g3"></div>
+    <div class="block g4"></div>
+    <div class="block g2"></div>
+
+    <div class="block g4"></div>
+    <div class="block g3"></div>
+    <div class="empty"></div>
+  </div>
+
+  <h1>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA</h1>
+  <h2>Piauí</h2>
+
+  <div class="aluno">M. P. Santos • Engenharia Civil</div>
+
+  <div class="loader"></div>
+
+</div>
+
+<script>
+/* ⏱ REDIRECIONAMENTO — PRESERVADO */
+setTimeout(() => {
+  window.location.href = "https://suap.ifpi.edu.br/";
+}, 7000);
+</script>
+
+</body>
+</html>
