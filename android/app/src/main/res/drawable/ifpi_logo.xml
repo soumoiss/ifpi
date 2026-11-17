@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <group android:scaleX="0.55" android:scaleY="0.55" android:translateX="28" android:translateY="18">
+        <!-- Exatamente os nove módulos verdes e o círculo vermelho da tela final enviada. -->
+        <path android:fillColor="#2F9E41" android:pathData="M35,0 L56,0 Q59,0 59,3 L59,24 Q59,27 56,27 L35,27 Q32,27 32,24 L32,3 Q32,0 35,0 Z M67,0 L88,0 Q91,0 91,3 L91,24 Q91,27 88,27 L67,27 Q64,27 64,24 L64,3 Q64,0 67,0 Z M3,32 L24,32 Q27,32 27,35 L27,56 Q27,59 24,59 L3,59 Q0,59 0,56 L0,35 Q0,32 3,32 Z M35,32 L56,32 Q59,32 59,35 L59,56 Q59,59 56,59 L35,59 Q32,59 32,56 L32,35 Q32,32 35,32 Z M3,64 L24,64 Q27,64 27,67 L27,88 Q27,91 24,91 L3,91 Q0,91 0,88 L0,67 Q0,64 3,64 Z M35,64 L56,64 Q59,64 59,67 L59,88 Q59,91 56,91 L35,91 Q32,91 32,88 L32,67 Q32,64 35,64 Z M67,64 L88,64 Q91,64 91,67 L91,88 Q91,91 88,91 L67,91 Q64,91 64,88 L64,67 Q64,64 67,64 Z M3,96 L24,96 Q27,96 27,99 L27,120 Q27,123 24,123 L3,123 Q0,123 0,120 L0,99 Q0,96 3,96 Z M35,96 L56,96 Q59,96 59,99 L59,120 Q59,123 56,123 L35,123 Q32,123 32,120 L32,99 Q32,96 35,96 Z"/>
+        <path android:fillColor="#CD191E" android:pathData="M13.5,-1.35 C21.7,-1.35 28.35,5.30 28.35,13.5 C28.35,21.70 21.70,28.35 13.5,28.35 C5.30,28.35 -1.35,21.70 -1.35,13.5 C-1.35,5.30 5.30,-1.35 13.5,-1.35 Z"/>
+    </group>
+</vector>
